@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #111;
+        }
+
+        .logo {
+            color: #00eaff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid #00eaff;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #00eaff;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .bg {
+            background: #f4f4f4;
+        }
+
+        .skills span {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 16px;
+            background: #00eaff;
+            border-radius: 15px;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #111;
+            color: #fff;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">MyPortfolio</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div>
+       
+        <h1>Hello, I'm <span>DHEEPAK ADHITHYA</span></h1>
+        <p>CSE Student</p>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a CSE student learning web development using HTML and CSS.</p>
+</section>
+
+<section id="skills" class="section bg">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Python</span>
+    </div>
+</section>
+
+
+<section id="contact" class="section bg">
+    <h2>Contact</h2>
+    <p>Email: dheepakadhithyas.cs24@bitsathy.ac.in</p>
+    <p>Phone: +91 7010816140</p>
+</section>
+
+</body>
+</html>
