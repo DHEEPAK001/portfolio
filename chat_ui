@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Chat UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#6366F1",
+            chatbg: "#EEF2FF"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+
+<!-- Chat Container -->
+<div class="w-full max-w-5xl h-[90vh] bg-white rounded-xl shadow-lg flex overflow-hidden">
+
+  <!-- Sidebar -->
+  <aside class="w-1/3 bg-gray-50 border-r hidden md:block">
+    <div class="p-4 border-b">
+      <h2 class="text-xl font-bold text-primary">Chats</h2>
+    </div>
+
+    <div class="overflow-y-auto h-full">
+      <!-- Chat Item -->
+      <div class="flex items-center gap-4 p-4 hover:bg-chatbg cursor-pointer">
+        <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">A</div>
+        <div>
+          <p class="font-semibold">Alex</p>
+          <p class="text-sm text-gray-500">Hey! How are you?</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 p-4 hover:bg-chatbg cursor-pointer">
+        <div class="w-10 h-10 rounded-full bg-indigo-400 text-white flex items-center justify-center font-bold">S</div>
+        <div>
+          <p class="font-semibold">Sarah</p>
+          <p class="text-sm text-gray-500">Let's meet tomorrow</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 p-4 hover:bg-chatbg cursor-pointer">
+        <div class="w-10 h-10 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">J</div>
+        <div>
+          <p class="font-semibold">John</p>
+          <p class="text-sm text-gray-500">Sent a photo</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Chat Area -->
+  <main class="flex-1 flex flex-col">
+
+    <!-- Chat Header -->
+    <div class="flex items-center gap-4 p-4 border-b">
+      <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">A</div>
+      <div>
+        <p class="font-semibold">Alex</p>
+        <p class="text-sm text-green-500">Online</p>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div class="flex-1 p-6 space-y-4 overflow-y-auto bg-gray-50">
+
+      <!-- Incoming -->
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">A</div>
+        <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+          Hey! Are you free today?
+        </div>
+      </div>
+
+      <!-- Outgoing -->
+      <div class="flex justify-end">
+        <div class="bg-primary text-white p-3 rounded-lg shadow max-w-xs">
+          Yes! What’s up?
+        </div>
+      </div>
+
+      <!-- Incoming -->
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">A</div>
+        <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+          Let’s work on the project UI 😄
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Message Input -->
+    <div class="p-4 border-t flex gap-3">
+      <input
+        type="text"
+        placeholder="Type a message..."
+        class="flex-1 border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+      />
+      <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-indigo-600">
+        Send
+      </button>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
